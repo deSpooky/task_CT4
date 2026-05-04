@@ -1,0 +1,9 @@
+.product-card__button {
+  margin-top: auto;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #dcdcdc;
+  font: inherit;
+  cursor: pointer;
+}

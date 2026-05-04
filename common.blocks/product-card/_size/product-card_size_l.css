@@ -1,0 +1,11 @@
+.product-card_size_l {
+  padding: 18px;
+}
+
+.product-card_size_l .product-card__title {
+  font-size: 19px;
+}
+
+.product-card_size_l .product-card__image {
+  border-radius: 16px;
+}

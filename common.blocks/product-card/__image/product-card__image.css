@@ -1,0 +1,7 @@
+.product-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #e5e7eb;
+}
