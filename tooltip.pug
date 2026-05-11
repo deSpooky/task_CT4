@@ -1,0 +1,20 @@
+mixin tooltip(triggerText, tooltipText) 
+    .tooltip 
+        button.tooltip__trigger= triggerText 
+        .tooltip__content= tooltipText
+
+html(lang="en")
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Document 
+        link(rel="stylesheet", href="common.blocks/tooltip")
+        link(rel="stylesheet", href="common.blocks/tooltip/__content/tooltip__content.css")
+        link(rel="stylesheet", href="common.blocks/tooltip/__trigger/tooltip__trigger.css")
+        link(rel="stylesheet", href="common.blocks/tooltip/_visible/tooltip_visible.css")
+        
+    body 
+        +tooltip("Кнопка 1", "Всплывающее 1")
+        +tooltip("Кнопка 2", "Всплывающее 2")
+        +tooltip("Кнопка 3", "Всплывающее 3")
+        script(src="script.js")

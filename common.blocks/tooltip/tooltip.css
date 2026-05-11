@@ -1,0 +1,5 @@
+.tooltip {
+    /*Стили всего блока*/
+    position: relative;
+    display: inline-block;
+}

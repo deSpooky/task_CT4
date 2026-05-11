@@ -1,0 +1,9 @@
+.tooltip__trigger {
+    /*Стили для тригера - кнопки*/
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,13 @@
+.tooltip__content {
+    /*Стили для самой подсказки*/
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-wrap: nowrap;
+    background-color: #b9b9b9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
