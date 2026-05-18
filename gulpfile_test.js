@@ -9,11 +9,11 @@ const levels = [
 ]
 
 function getDeclarationBlocks() {
-    const decl = require("./page.decl.garfield.js")
+    const decl = require("./page.decl.js")
     return decl.blocks
 }
 
-function buildCSS_garfield() {
+function buildCSS() {
     const blocks = getDeclarationBlocks();
 
     let files = [];
@@ -28,16 +28,16 @@ function buildCSS_garfield() {
     return gulp.src(files)
     .pipe(concat("bundle.css"))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("dist_garfield"))
+    .pipe(gulp.dest("dist"))
 }
 
 function watch() {
     levels.forEach(level => {
-        gulp.watch(`${level}/**/*.css`, buildCSS_garfield)
+        gulp.watch(`${level}/**/*.css`, buildCSS)
     })
-    gulp.watch("page.decl.garfield.js", buildCSS_garfield)
+    gulp.watch("page.decl.js", buildCSS)
 }
 
-exports.buildCSS = buildCSS_garfield;
+exports.buildCSS = buildCSS;
 exports.watch = watch;
-exports.default = buildCSS_garfield;
+exports.default = buildCSS;
