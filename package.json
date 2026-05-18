@@ -1,5 +1,13 @@
 {
   "dependencies": {
-    "pug": "^3.0.4"
+    "pug": "^3.0.4",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "glob": "^13.0.6",
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1"
   }
 }
