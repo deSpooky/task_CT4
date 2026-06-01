@@ -10,6 +10,9 @@ module.exports = {
             name: "filter"
         },
         {
+            name: "page"
+        },
+        {
             name: "pagination"
         },
         {

@@ -1,7 +1,9 @@
 const gulp = require("gulp");
+const pug = require("gulp-pug");
 const concat = require("gulp-concat");
 const cleanCSS = require("gulp-clean-css");
 const glob = require("glob");
+const uglify = require("gulp-uglify");
 
 const levels = [
     "common.blocks",
@@ -28,7 +30,18 @@ function buildCSS_garfield() {
     return gulp.src(files)
     .pipe(concat("bundle.css"))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("dist_garfield"))
+    .pipe(gulp.dest("dist"))
+}
+
+function buildHTML() {
+    return gulp.src("src/pug/pages/index.pug")
+        .pipe(
+            pug({
+                pretty:true
+            })
+        )
+        .pipe(concat("index.html"))
+        .pipe(gulp.dest("./"));
 }
 
 function watch() {
@@ -38,6 +51,11 @@ function watch() {
     gulp.watch("page.decl.garfield.js", buildCSS_garfield)
 }
 
-exports.buildCSS = buildCSS_garfield;
+function build() {
+    return gulp.parallel(buildCSS_garfield, buildHTML)();
+}
+
 exports.watch = watch;
-exports.default = buildCSS_garfield;
+exports.buildCSS = buildCSS_garfield;
+exports.buildHTML = buildHTML;
+exports.build = build;

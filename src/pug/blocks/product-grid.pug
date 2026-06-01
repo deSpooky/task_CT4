@@ -1,0 +1,11 @@
+include product-card.pug
+
+mixin product-grid(products, cols)
+  -
+    var classes = 'product-grid product-grid_cols_' + cols;
+
+  section(class=classes)
+    .product-grid__list
+      each product in products
+        .product-grid__item
+          +product-card(product)

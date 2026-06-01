@@ -1,0 +1,14 @@
+mixin pagination(current, total)
+  -
+    var pages = [];
+    for (var i = 1; i <= total; i++) pages.push(i);
+
+  nav.pagination.pagination_size_m(aria-label='Пагинация')
+    ul.pagination__list
+      each pageNum in pages
+        if pageNum <= 3 || pageNum === total
+          li(class=pageNum === current ? 'pagination__item pagination__item_current' : 'pagination__item')
+            a.pagination__link(href='#' data-page=pageNum)= pageNum
+        else if pageNum === 4
+          li.pagination__item
+            span.pagination__ellipsis ...

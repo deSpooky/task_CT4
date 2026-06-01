@@ -1,0 +1,13 @@
+mixin product-card(product)
+  -
+    var classes = 'product-card product-card_size_l';
+    if (product.sale) classes += ' product-card_sale';
+
+  article(class=classes data-brand=product.brand)
+    img.product-card__image(src=product.image alt=product.title)
+    if product.sale
+      span.product-card__badge Распродажа
+    h2.product-card__title= product.title
+    div.product-card__rating= 'Оценки: ' + product.rating
+    div.product-card__price= product.price
+    button.product-card__button(type='button') В корзину

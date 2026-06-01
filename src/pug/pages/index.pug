@@ -1,0 +1,51 @@
+include ../blocks/breadcrumbs.pug
+include ../blocks/filter.pug
+include ../blocks/product-grid.pug
+include ../blocks/pagination.pug
+include ../blocks/catalog-layout.pug
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title гарфилды
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='dist/bundle.css')
+  body.page.page_theme_default
+    -
+      var breadcrumbsData = ['Главная', 'Каталог', 'Смартфоны'];
+
+      var filterGroups = [
+        {
+          title: 'Бренды',
+          items: [
+            { id: 'samsung', value: 'Samsung', label: 'Samsung' },
+            { id: 'apple', value: 'Apple', label: 'Apple' },
+            { id: 'xiaomi', value: 'Xiaomi', label: 'Xiaomi' }
+          ]
+        }
+      ];
+
+      var productsData = [
+        { title: '1985 Tyco Garfield Telephone', price: '349.99$', rating: '4.9', image: 'common.blocks/product-card/__image/phone.png', brand: 'Samsung', sale: true },
+        { title: '1985 Tyco Garfield Telephone', price: '349.99$', rating: '4.9', image: 'common.blocks/product-card/__image/phone.png', brand: 'Apple', sale: true },
+        { title: '1985 Tyco Garfield Telephone', price: '349.99$', rating: '4.9', image: 'common.blocks/product-card/__image/phone.png', brand: 'Xiaomi', sale: true },
+        { title: '1985 Tyco Garfield Telephone', price: '349.99$', rating: '4.9', image: 'common.blocks/product-card/__image/phone.png', brand: 'Samsung', sale: true },
+        { title: '1985 Tyco Garfield Telephone', price: '349.99$', rating: '4.9', image: 'common.blocks/product-card/__image/phone.png', brand: 'Apple', sale: true },
+        { title: '1985 Tyco Garfield Telephone', price: '349.99$', rating: '4.9', image: 'common.blocks/product-card/__image/phone.png', brand: 'Xiaomi', sale: true }
+      ];
+
+      var currentPage = 1;
+      var totalPages = 10;
+
+    .page__container
+      +breadcrumbs(breadcrumbsData)
+
+      +catalog-layout()
+        aside.catalog-layout__sidebar
+          +filter(filterGroups)
+
+        main.catalog-layout__content
+          +product-grid(productsData, 3)
+          +pagination(currentPage, totalPages)

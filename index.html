@@ -1,135 +1,107 @@
-<!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>гарфилды</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist_garfield/bundle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/bundle.css">
   </head>
-  <body class="page">
+  <body class="page page_theme_default">
     <div class="page__container">
-      <nav class="breadcrumbs breadcrumbs_size_m" aria-label="Хлебные крошки">
+      <nav class="breadcrumbs breadcrumbs_size_m">
         <ol class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Главная</a>
-            <span class="breadcrumbs__separator">/</span>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a><span class="breadcrumbs__separator">/</span>
           </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Каталог</a>
-            <span class="breadcrumbs__separator">/</span>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a><span class="breadcrumbs__separator">/</span>
           </li>
-          <li class="breadcrumbs__item">
-            <span class="breadcrumbs__current">Смартфоны</span>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__current">Смартфоны</span>
           </li>
         </ol>
       </nav>
-
-      <div class="page__layout catalog-layout">
+      <div class="catalog-layout catalog-layout_mode_catalog">
         <aside class="catalog-layout__sidebar">
           <form class="filter filter_theme_dark">
             <h1 class="filter__title">Фильтр</h1>
-
             <div class="filter__group">
+              <h2 class="filter__group-title">Бренды</h2>
               <ul class="filter__list">
                 <li class="filter__item">
-                  <input class="filter__checkbox" type="checkbox" id="samsung" />
-                  <label class="filter__label" for="samsung">Garfield</label>
+                  <input class="filter__checkbox" type="checkbox" id="samsung" name="brand" value="Samsung"/>
+                  <label class="filter__label" for="samsung">Samsung</label>
                 </li>
                 <li class="filter__item">
-                  <input class="filter__checkbox" type="checkbox" id="apple" />
-                  <label class="filter__label" for="apple">Garfield</label>
+                  <input class="filter__checkbox" type="checkbox" id="apple" name="brand" value="Apple"/>
+                  <label class="filter__label" for="apple">Apple</label>
                 </li>
                 <li class="filter__item">
-                  <input class="filter__checkbox" type="checkbox" id="xiaomi" />
-                  <label class="filter__label" for="xiaomi">Garfield</label>
+                  <input class="filter__checkbox" type="checkbox" id="xiaomi" name="brand" value="Xiaomi"/>
+                  <label class="filter__label" for="xiaomi">Xiaomi</label>
                 </li>
               </ul>
             </div>
           </form>
         </aside>
-
         <main class="catalog-layout__content">
           <section class="product-grid product-grid_cols_3">
             <div class="product-grid__list">
               <div class="product-grid__item">
-                <article class="product-card product-card_size_l product-card_sale">
-                  <img class="product-card__image" src="../common.blocks/product-card/__image/phone.png" alt="gargy" />
+                <article class="product-card product-card_size_l product-card_sale" data-brand="Samsung"><img class="product-card__image" src="common.blocks/product-card/__image/phone.png" alt="1985 Tyco Garfield Telephone"/><span class="product-card__badge">Распродажа</span>
                   <h2 class="product-card__title">1985 Tyco Garfield Telephone</h2>
                   <div class="product-card__rating">Оценки: 4.9</div>
                   <div class="product-card__price">349.99$</div>
                   <button class="product-card__button" type="button">В корзину</button>
                 </article>
               </div>
-
               <div class="product-grid__item">
-                <article class="product-card product-card_size_l product-card_sale">
-                  <img class="product-card__image" src="../common.blocks/product-card/__image/phone.png" alt="gargy" />
+                <article class="product-card product-card_size_l product-card_sale" data-brand="Apple"><img class="product-card__image" src="common.blocks/product-card/__image/phone.png" alt="1985 Tyco Garfield Telephone"/><span class="product-card__badge">Распродажа</span>
                   <h2 class="product-card__title">1985 Tyco Garfield Telephone</h2>
                   <div class="product-card__rating">Оценки: 4.9</div>
                   <div class="product-card__price">349.99$</div>
                   <button class="product-card__button" type="button">В корзину</button>
                 </article>
               </div>
-
               <div class="product-grid__item">
-                <article class="product-card product-card_size_l product-card_sale">
-                  <img class="product-card__image" src="../common.blocks/product-card/__image/phone.png" alt="gargy" />
+                <article class="product-card product-card_size_l product-card_sale" data-brand="Xiaomi"><img class="product-card__image" src="common.blocks/product-card/__image/phone.png" alt="1985 Tyco Garfield Telephone"/><span class="product-card__badge">Распродажа</span>
                   <h2 class="product-card__title">1985 Tyco Garfield Telephone</h2>
                   <div class="product-card__rating">Оценки: 4.9</div>
                   <div class="product-card__price">349.99$</div>
                   <button class="product-card__button" type="button">В корзину</button>
                 </article>
               </div>
-
               <div class="product-grid__item">
-                <article class="product-card product-card_size_l product-card_sale">
-                  <img class="product-card__image" src="../common.blocks/product-card/__image/phone.png" alt="gargy" />
+                <article class="product-card product-card_size_l product-card_sale" data-brand="Samsung"><img class="product-card__image" src="common.blocks/product-card/__image/phone.png" alt="1985 Tyco Garfield Telephone"/><span class="product-card__badge">Распродажа</span>
                   <h2 class="product-card__title">1985 Tyco Garfield Telephone</h2>
                   <div class="product-card__rating">Оценки: 4.9</div>
                   <div class="product-card__price">349.99$</div>
                   <button class="product-card__button" type="button">В корзину</button>
                 </article>
               </div>
-
               <div class="product-grid__item">
-                <article class="product-card product-card_size_l product-card_sale">
-                  <img class="product-card__image" src="../common.blocks/product-card/__image/phone.png" alt="gargy" />
+                <article class="product-card product-card_size_l product-card_sale" data-brand="Apple"><img class="product-card__image" src="common.blocks/product-card/__image/phone.png" alt="1985 Tyco Garfield Telephone"/><span class="product-card__badge">Распродажа</span>
                   <h2 class="product-card__title">1985 Tyco Garfield Telephone</h2>
                   <div class="product-card__rating">Оценки: 4.9</div>
                   <div class="product-card__price">349.99$</div>
                   <button class="product-card__button" type="button">В корзину</button>
                 </article>
               </div>
-
               <div class="product-grid__item">
-                <article class="product-card product-card_size_l product-card_sale">
-                  <img class="product-card__image" src="../common.blocks/product-card/__image/phone.png" alt="gargy" />
+                <article class="product-card product-card_size_l product-card_sale" data-brand="Xiaomi"><img class="product-card__image" src="common.blocks/product-card/__image/phone.png" alt="1985 Tyco Garfield Telephone"/><span class="product-card__badge">Распродажа</span>
                   <h2 class="product-card__title">1985 Tyco Garfield Telephone</h2>
                   <div class="product-card__rating">Оценки: 4.9</div>
                   <div class="product-card__price">349.99$</div>
                   <button class="product-card__button" type="button">В корзину</button>
                 </article>
               </div>
-
+            </div>
+          </section>
           <nav class="pagination pagination_size_m" aria-label="Пагинация">
             <ul class="pagination__list">
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link_active" href="#">1</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">2</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">3</a>
-              </li>
-              <li class="pagination__item">
-                <span class="pagination__ellipsis">...</span>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">10</a>
-              </li>
+              <li class="pagination__item pagination__item_current"><a class="pagination__link" href="#" data-page="1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#" data-page="2">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#" data-page="3">3</a></li>
+              <li class="pagination__item"><span class="pagination__ellipsis">...</span></li>
+              <li class="pagination__item"><a class="pagination__link" href="#" data-page="10">10</a></li>
             </ul>
           </nav>
         </main>

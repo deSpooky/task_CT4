@@ -1,0 +1,16 @@
+mixin filter(groups)
+  form.filter.filter_theme_dark
+    h1.filter__title Фильтр
+    each group in groups
+      .filter__group
+        h2.filter__group-title= group.title
+        ul.filter__list
+          each item in group.items
+            li.filter__item
+              input.filter__checkbox(
+                type='checkbox'
+                id=item.id
+                name='brand'
+                value=item.value
+              )
+              label.filter__label(for=item.id)= item.label
